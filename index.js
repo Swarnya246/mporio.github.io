@@ -3,6 +3,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		// User is signed in.
 
 		document.getElementById("user_div").style.display = "block";
+		document.getElementById("logout").style.display = "initial";
 		document.getElementById("signup_div").style.display = "none"
 		document.getElementById("login_div").style.display = "none";
 
@@ -10,6 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		// No user is signed in.
 
 		document.getElementById("user_div").style.display = "none";
+		document.getElementById("logout").style.display = "none";
 		document.getElementById("signup_div").style.display = "block"
 		document.getElementById("login_div").style.display = "block";
 
