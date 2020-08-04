@@ -4,8 +4,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 		document.getElementById("user_div").style.display = "block";
 		document.getElementById("logout").style.display = "initial";
-		document.getElementById("signup_div").style.display = "none"
-		document.getElementById("login_div").style.display = "none";
+		document.getElementById("auth").style.display = "none"
 
 	} else {
 		// No user is signed in.
