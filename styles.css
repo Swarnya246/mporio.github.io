@@ -11,7 +11,7 @@ input, button {
 	font-weight: 700;
 }
 
-.main-div, .login-div, .signup-div {
+.main-div, .login_div, .signup-div {
 	width: 20%;
 	margin: 0px auto;
 	margin-top: 150px;
