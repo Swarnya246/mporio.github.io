@@ -11,7 +11,7 @@ input, button {
 	font-weight: 700;
 }
 
-.main-div, .loggedin-div, .signup-div, .login_div {
+.main-div, .loggedin-div, .signup-div {
 	width: 20%;
 	margin: 0px auto;
 	margin-top: 150px;
@@ -25,7 +25,8 @@ input {
 	background: #fff;
 	padding: 15px;
 	outline: none;
-	width: 100%;
+	width: -moz-available;
+	width: -webkit-available;
 	margin-bottom: 20px;
 }
 
@@ -43,7 +44,8 @@ button {
 	border: 1px solid #26BD6D;
 	border-radius: 5px;
 	padding: 15px 15px 15px 15px;
-	width: 336.867px;
+	width: -moz-available;
+	width: -webkit-available;
 	transition: 0.3s;
 	-webkit-transition: 0.3s;
 	-moz-transition: 0.3s;
@@ -79,4 +81,9 @@ button:hover {
 .logout {
 	margin: 20px 20px 20px 20px;
 	width: auto;
+}
+
+.auth {
+	display: flex;
+	justify-content: space-around;
 }
