@@ -1,3 +1,5 @@
+<?php
+?>
 <html>
 <head>
 	<title>Gift Card Registration</title>
