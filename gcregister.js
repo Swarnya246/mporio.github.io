@@ -1,5 +1,4 @@
-<?php
-?>
+<!Doctype html>
 <html>
 <head>
 	<title>Gift Card Registration</title>
