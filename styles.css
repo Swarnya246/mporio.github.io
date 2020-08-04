@@ -9,6 +9,7 @@ body {
 input, button {
 	font-family: 'Nunito', sans-serif;
 	font-weight: 700;
+	width: 100%;
 }
 
 .main-div, .loggedin-div, .signup-div {
@@ -32,17 +33,17 @@ input, button {
 .main-div input:focus, .signup-div input:focus {
 	border: 1px solid #777;
 	background: #fff;
-	color: #5d8ffc;
-	border: 1px solid #5d8ffc;
+	color: #26BD6D;
+	border: 1px solid #26BD6D;
 }
 
 .main-div button, .loggedin-div button, .signup-div button {
-	background: #5d8ffc;
-	color: #fff;
-	border: 1px solid #5d8ffc;
-	border-radius: 5px;
-	padding: 15px;
 	display: block;
+	background: #26BD6D;
+	color: #fff;
+	border: 1px solid #26BD6D;
+	border-radius: 5px;
+	padding: 15px 15px 15px 15px;
 	width: 100%;
 	transition: 0.3s;
 	-webkit-transition: 0.3s;
@@ -52,6 +53,6 @@ input, button {
 
 .main-div button:hover, .loggedin-div button:hover, .signup-div button:hover {
 	background: #fff;
-	color: #5d8ffc;
-	border: 1px solid #5d8ffc;
+	color: #26BD6D;
+	border: 1px solid #26BD6D;
 }
