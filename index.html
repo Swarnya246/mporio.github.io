@@ -8,16 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-	<table>
-		<th>
+
 	<div class="topnav">
 		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/output-onlinepngtools(1).png">
 		<div class="topnav-right">
 			<button class="logout" onclick="logout()" id="logout">Logout</button>
 		</div>
 	</div> 
-		</th>
-		<th>
+	<table>
+		<tr>
+	<td>	
 	<div class="main-div" id="login_div">
 		<h3>Login</h3>
 
@@ -26,7 +26,8 @@
 
 		<button onclick="login()">Login</button>
 	</div>
-		</th>
+		</td>	
+		<td>
 	<div class="main-div" id="signup_div">
 		<h3>Sign up</h3>
 
@@ -36,7 +37,9 @@
 
 		<button onclick="signup()">Sign up</button>
 	</div>
-
+		</td>
+		</tr>
+	</table>
 	<div class="loggedin-div" id="user_div">
 		<h3>Welcome, user!</h3>
 		<p>You are logged in.</p>
