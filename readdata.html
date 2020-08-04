@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Display Data</title>
+  </head>
+  <body>
+  <h1>Gift Cards Registered</h1>
+<table>
+<thead><th>Company</th><th>Value</th><th>Bid Starting Amount</th><th>Bid Start Date</th><th>Bid End Date</th>
+    </thead>
+  <tbody id='answer'></tbody>
+</table>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.3.0/firebase.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyA7BLgVClWgdG-RxNgBqaeUN71ycEEtXbA",
+    authDomain: "giftcardbid-b5606.firebaseapp.com",
+    databaseURL: "https://giftcardbid-b5606.firebaseio.com",
+    projectId: "giftcardbid-b5606",
+    storageBucket: "giftcardbid-b5606.appspot.com",
+    messagingSenderId: "150202728158",
+    appId: "1:150202728158:web:ee999e30856854377f4c4f",
+    measurementId: "G-C7RLQ9ZNNT"
+  };
+    firebase.initializeApp(firebaseConfig);
+
+    //establishes root of db
+    var rootRef = firebase.database().ref();
+
+    //creates ref for node
+    var ref = rootRef.child('gcregister');
+
+    // gets values from database and changes html
+    ref.on('value', function(snap) {
+    //re-initializes answer in html, so doesn't repeat
+    document.getElementById("answer").innerHTML = "";
+    //gets values for each element in data set
+
+    snap.forEach(function(child){
+    var childData = child.val();
+    var names = childData.company;
+    var val = childData.value;
+    var sprice = childData.price;
+    var sdate = childData.sdate;
+    var enddate = childData.enddate;
+    document.getElementById("answer").innerHTML += "<tr><td>"+ names + "</td><td> " + val + "</td><td>" + sprice + "</td></td>" + sdate + "</td><td>" + enddate + "</td></tr>";
+    });
+});
+</script>
+</body>
+</html>
