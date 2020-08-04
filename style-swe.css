@@ -82,7 +82,8 @@ button:hover {
 }
 .flex-container {
     display:flex;
-		
+		justify-content:center;
 	align-content:center;
-
+margin-right:200px;
+	margin-left:200px;
 }
