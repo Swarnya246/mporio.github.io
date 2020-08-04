@@ -4,9 +4,6 @@
 <head>
 	<title>Gift Card Registration</title>
 	<link rel="stylesheet" type="text/css" href="styles.css"> 
-	<link href="jquery.datetimepicker.min.css" rel="stylesheet">
-	<script src="jQuery.js"></script>
-	<script src="jquery.datetimepicker.full.js"></script>
 
 </head>
 <body>
