@@ -113,3 +113,14 @@ button:hover {
 .tagline {
 	text-align: center;
 }
+
+fieldset {
+    border: 2px solid #26BD6D;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+h3 {
+	text-align: center;
+	color: #26BD6D;
+}
