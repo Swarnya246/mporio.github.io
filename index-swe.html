@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Login</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="topnav">
+		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/output-onlinepngtools(1).png">
+		<div class="topnav-right">
+			<button class="logout" onclick="logout()" id="logout">Logout</button>
+		</div>
+	</div>
+	<div class="flex-container">
+
+			<div class="main-div" id="signup_div">
+				<h3>Sign up</h3>
+
+				<input type="text" placeholder="Your Name" id="text_field">
+				<input type="email" placeholder="your.email@example.com" id="email_signup_field">
+				<input type="password" placeholder="••••••••" id="password_signup_field">
+
+			<center>	<button onclick="signup()" width:"50px">Sign up</button></center>
+		</div>
+	<div class="main-div" id="login_div">
+		<h3>Login</h3>
+
+		<input type="email" placeholder="your.email@example.com" id="email_field">
+		<input type="password" placeholder="••••••••" id="password_field">
+
+		<center><button onclick="login()" width:"50px">Login</button></center>
+</div>
+</div>
+	<div class="loggedin-div" id="user_div">
+		<h3>Welcome, user!</h3>
+		<p>You are logged in.</p>
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+			 https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDhSdFVBYjQFASCXnec-maXZqXRyCJjGf8",
+			authDomain: "mporio-35b16.firebaseapp.com",
+			databaseURL: "https://mporio-35b16.firebaseio.com",
+			projectId: "mporio-35b16",
+			storageBucket: "mporio-35b16.appspot.com",
+			messagingSenderId: "1003574916249",
+			appId: "1:1003574916249:web:ce783c4bfabf7a5d4bf408"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
