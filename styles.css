@@ -13,7 +13,7 @@ input, button {
 }
 
 .main-div, .loggedin-div, .signup-div {
-	width: 20%;
+	width: 100%;
 	margin: 0px auto;
 	margin-top: 150px;
 	padding: 20px;
