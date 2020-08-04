@@ -10,11 +10,17 @@ input, button {
 	font-family: 'Nunito', sans-serif;
 	font-weight: 700;
 }
-
-.main-div, .loggedin-div, .signup-div {
+ 
+.main-div, .signup-div {
 	margin-top: 150px;
 	padding: 20px;
 	width: 20%;
+}
+
+.loggedin-div {
+	margin-top: 150px;
+	padding: 20px;
+	width: 100%;
 }
 
 input {
@@ -102,4 +108,8 @@ button:hover {
 .button-text {
 	text-align: center;
 	margin: auto;
+}
+
+.tagline {
+	text-align: center;
 }
