@@ -19,7 +19,7 @@ input, button {
 	padding: 20px;
 }
 
-.main-div input, .signup-div input {
+input {
 	display: block;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -30,14 +30,14 @@ input, button {
 	margin-bottom: 20px;
 }
 
-.main-div input:focus, .signup-div input:focus {
+input:focus {
 	border: 1px solid #777;
 	background: #fff;
 	color: #26BD6D;
 	border: 1px solid #26BD6D;
 }
 
-.main-div button, .loggedin-div button, .signup-div button {
+button {
 	display: block;
 	background: #26BD6D;
 	color: #fff;
@@ -51,8 +51,33 @@ input, button {
 	outline: none;
 }
 
-.main-div button:hover, .loggedin-div button:hover, .signup-div button:hover {
+button:hover {
 	background: #fff;
 	color: #26BD6D;
 	border: 1px solid #26BD6D;
+}
+
+.topnav {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+	-webkit-box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
+	-moz-box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
+	box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
+}
+
+.topnav-right {
+
+}
+
+.logo {
+	color: #000;
+	margin: 20px 20px 20px 20px;
+}
+
+.logout {
+	margin: 20px 20px 20px 20px;
+	width: auto;
 }
