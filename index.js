@@ -86,3 +86,8 @@ function logout() {
 	});
 
 }
+
+function displayData() {
+	var database = firebase.database().ref('giftcards/tP4JoFqspTNMm6uSdGo4/Company')
+	console.log(database)
+}
