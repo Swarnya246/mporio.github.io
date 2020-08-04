@@ -14,6 +14,7 @@ input, button {
 .main-div, .loggedin-div, .signup-div {
 	margin-top: 150px;
 	padding: 20px;
+	width: 20%;
 }
 
 input {
