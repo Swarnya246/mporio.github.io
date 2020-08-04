@@ -11,7 +11,7 @@
 	<div class="topnav">
 		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/output-onlinepngtools(1).png">
 		<div class="topnav-right">
-			<button class="logout" onclick="logout()" id="logout">Logout</button>
+			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
 		</div>
 	</div> 
 
@@ -23,22 +23,22 @@
 			<input type="password" placeholder="••••••••" id="password_field">
 
 			<button onclick="login()">Login</button>
+			<button onclick="signinWithGoogle()"><img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" height="20px" class="google-logo"><span class="button-text"> Login with Google</span></button>
 		</div>
 
 		<div class="main-div" id="signup_div">
 			<h3>Sign up</h3>
 
-			<input type="text" placeholder="Albus Dumbledore" id="text_field">
 			<input type="email" placeholder="your.email@example.com" id="email_signup_field">
 			<input type="password" placeholder="••••••••" id="password_signup_field">
 
 			<button onclick="signup()">Sign up</button>
+			<button onclick="signinWithGoogle()"><img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" height="20px" class="google-logo"><span class="button-text"> Sign up with Google</span></button>
 		</div>
 	</div>
 
 	<div class="loggedin-div" id="user_div">
-		<h3>Welcome, user!</h3>
-		<p>You are logged in.</p>
+		<h1>Welcome, user!</h1>
 	</div>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
