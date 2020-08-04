@@ -8,33 +8,33 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
 	<div class="topnav">
 		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/output-onlinepngtools(1).png">
 		<div class="topnav-right">
 			<button class="logout" onclick="logout()" id="logout">Logout</button>
 		</div>
 	</div> 
-		
-	<div class="main-div" id="login_div">
-		<h3>Login</h3>
 
-		<input type="email" placeholder="your.email@example.com" id="email_field">
-		<input type="password" placeholder="••••••••" id="password_field">
+	<div class="auth">
+		<div class="main-div" id="login_div">
+			<h3>Login</h3>
 
-		<button onclick="login()">Login</button>
+			<input type="email" placeholder="your.email@example.com" id="email_field">
+			<input type="password" placeholder="••••••••" id="password_field">
+
+			<button onclick="login()">Login</button>
+		</div>
+
+		<div class="main-div" id="signup_div">
+			<h3>Sign up</h3>
+
+			<input type="email" placeholder="your.email@example.com" id="email_signup_field">
+			<input type="password" placeholder="••••••••" id="password_signup_field">
+
+			<button onclick="signup()">Sign up</button>
+		</div>
 	</div>
-	<div class="main-div" id="signup_div">
-		<h3>Sign up</h3>
 
-		<input type="text" placeholder="Your Name" id="text_field">
-		<input type="email" placeholder="your.email@example.com" id="email_signup_field">
-		<input type="password" placeholder="••••••••" id="password_signup_field">
-
-		<button onclick="signup()">Sign up</button>
-		
-	</div>
-		
 	<div class="loggedin-div" id="user_div">
 		<h3>Welcome, user!</h3>
 		<p>You are logged in.</p>
