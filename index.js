@@ -3,17 +3,15 @@ firebase.auth().onAuthStateChanged(function(user) {
 		// User is signed in.
 
 		document.getElementById("user_div").style.display = "block";
-		document.getElementById("logout").style.display = "initial";
-		document.getElementById("signup_div").style.display = "none"
-		document.getElementById("login_div").style.display = "none";
+		document.getElementById("topnav-right").style.display = "inline-flex";
+		document.getElementById("auth").style.display = "none";
 
 	} else {
 		// No user is signed in.
 
 		document.getElementById("user_div").style.display = "none";
-		document.getElementById("logout").style.display = "none";
-		document.getElementById("signup_div").style.display = "block"
-		document.getElementById("login_div").style.display = "block";
+		document.getElementById("topnav-right").style.display = "none";
+		document.getElementById("auth").style.display = "flex";
 
 	}
 });
@@ -88,6 +86,11 @@ function logout() {
 }
 
 function displayData() {
-	var database = firebase.database().ref('giftcards/tP4JoFqspTNMm6uSdGo4/Company')
-	console.log(database)
+	var ref = firebase.database().ref();
+
+	ref.on("value", function(snapshot) {
+		console.log(snapshot.val());
+	}, function (error) {
+		console.log("Error: " + error.code);
+	});
 }
