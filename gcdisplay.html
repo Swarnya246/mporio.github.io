@@ -1,0 +1,72 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Gift Card Bid Display</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+	<div class="topnav">
+		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/mporio-logo.png">
+		<div class="topnav-right" id="topnav-right">
+			<a class="add-icon" href="g-cregister.html"><img class="add-icon" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/add-icon.png"></a>
+			<a class="gift-icon" href="display_gc.html"><img class="gift-icon" height="63px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/gift-icon.png"></a>
+			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
+		</div>
+	</div>
+	<div class="loggedin-div" id="user_div">
+		<h2 class="tagline" onclick="displayData()">A simple and effective way of assisting small businesses—by bidding on gift cards. </h2>
+	</div>
+<center>
+	<fieldset>
+		<legend><h3>
+		<!-- insert javascript to display data from db-->
+		$50 Amazon Gift Card</h3></legend>
+	<div class="display-div">
+
+      <h4> email@example.com
+      <!-- insert bidee email -->
+      </h4>
+
+		<fieldset1>
+      <div class="flex-container">
+      <div>
+				<fieldset>
+      <legend>Base Bid</legend>
+      <h1> $20
+      <!-- insert starting price from db, but leave dollar sign alone-->
+      </h1>
+		</fieldset>
+      </div>
+      <div>
+<fieldset>
+      <legend>Current Highest Bid</legend>
+      <h1>$24
+      <!--insert highest number from the value side of the table that holds the email and value of this gift card in the bidee's homepg, leave dollar sign-->
+      </h1>
+		</fieldset1>
+
+      </div>
+      </div>
+			<fieldset>
+				<legend> Your Bid </legend>
+      <div>
+      <div>
+		      <input type="test" name="Your_Bid" placeholder="Your Bid" required>
+				</div>
+		      </div>
+		      <button type="submit">Bid</button>
+				</fieldset>
+
+
+
+
+</div>
+	</fieldset>
+	</center>
+
+				<script type="text/javascript" src="index-swe.js"></script>
+
+</body>
+</html>
