@@ -17,7 +17,7 @@
 	<div class="loggedin-div" id="user_div">
 		<h2 class="tagline" onclick="displayData()">A simple and effective way of assisting small businesses—by bidding on gift cards. </h2>
 	</div>
-<center>
+<center id="display">
 	<fieldset>
 		<legend><h3>
 		<!-- insert javascript to display data from db-->
@@ -31,25 +31,26 @@
 		<fieldset1>
       <div class="flex-container">
       <div>
-				<fieldset>
-      <legend>Base Bid</legend>
-      <h1> $20
-      <!-- insert starting price from db, but leave dollar sign alone-->
-      </h1>
+		<fieldset class="base-bid">
+		<legend><h3>Base bid</h3></legend>
+		<h2> 
+			$20
+				<!-- insert starting price from db, but leave dollar sign alone-->
+		</h2>
 		</fieldset>
       </div>
       <div>
-<fieldset>
-      <legend>Current Highest Bid</legend>
-      <h1>$24
-      <!--insert highest number from the value side of the table that holds the email and value of this gift card in the bidee's homepg, leave dollar sign-->
-      </h1>
-		</fieldset1>
-
+	      <fieldset class="current-highest">
+		<legend><h3>Highest bid</h3></legend>
+		<h2>
+			$24
+			<!--insert highest number from the value side of the table that holds the email and value of this gift card in the bidee's homepg, leave dollar sign-->
+			</h2>
+		</fieldset>
       </div>
       </div>
 			<fieldset>
-				<legend> Your Bid </legend>
+				<legend> Your bid </legend>
       <div>
       <div>
 		      <input type="test" name="Your_Bid" placeholder="Your Bid" required>
