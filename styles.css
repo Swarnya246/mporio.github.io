@@ -9,7 +9,6 @@ body {
 input, button {
 	font-family: 'Nunito', sans-serif;
 	font-weight: 700;
-	width:50%;
 }
  
 .main-div, .signup-div {
@@ -82,7 +81,7 @@ button:hover {
 }
 
 .topnav-right {
-
+	display: inline-flex;
 }
 
 .logo {
@@ -127,8 +126,7 @@ fieldset {
 h3 {
 	color: #26BD6D;
 }
-.gc-div{
-	margin-top: 150px;
-	padding: 20px;
-	width: 30%;
+
+.add-icon {
+	align-self: center;
 }
