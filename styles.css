@@ -134,3 +134,18 @@ h3 {
 .add-icon, .gift-icon {
 	align-self: center;
 }
+.flex-container{
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+
+}
+.fieldset1 {
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20pxpx;
+	padding-left: 20px;
+}
