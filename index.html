@@ -42,11 +42,26 @@
 			</fieldset>
 		</div>
 	</div>
-<h1>Available Gift Cards</h1>
-		<div id="display">
+<div class="loggedin-div" id="user_div">
+		<h1>My Gift Cards</h1>
+		<div id="mygiftcards">
 			
 		</div>
 
+		<center>
+			<div class="gc-div">
+				<fieldset>
+					<legend><h3>Register a gift card</h3></legend>
+					<input type="text" name="Company" id="company" placeholder="Company" required>
+					<input type="number" name="Value" id="value" placeholder="Value" required>
+					<input type="number" name="Starting_Price" id="base" placeholder="Base price" required>
+					<input type="date" name="End_Date" id="end" placeholder="End of auction" required>
+
+					<button onclick="registerGiftCard()">Submit</button>
+				</fieldset>	
+			</div>
+		</center>
+	</div>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
