@@ -158,10 +158,19 @@ h3 {
 }
 
 .current-highest {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 25px;
 }
 
 #display {
 	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+legend {
+
+}
+
+.giftcard-header {
+	color: #26BD6D;
 }
