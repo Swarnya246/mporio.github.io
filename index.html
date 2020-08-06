@@ -44,57 +44,28 @@
 	</div>
 
 	<div class="loggedin-div" id="user_div">
+		<h1>My Gift Cards</h1>
+		<div id="mygiftcards">
+			
+		</div>
+
+		<center>
+			<div class="gc-div">
+				<fieldset>
+					<legend><h3>Register a gift card</h3></legend>
+					<input type="text" name="Company" id="company" placeholder="Company" required>
+					<input type="number" name="Value" id="value" placeholder="Value" required>
+					<input type="number" name="Starting_Price" id="base" placeholder="Base price" required>
+					<input type="date" name="End_Date" id="end" placeholder="End of auction" required>
+
+					<button onclick="registerGiftCard()">Submit</button>
+				</fieldset>	
+			</div>
+		</center>
+
+		<h1>Available Gift Cards</h1>
 		<div id="display">
-			<!--
-			<fieldset class="giftcards">
-				<legend>
-					<h3>
-					$50 Amazon Gift Card
-					</h3>
-				</legend>
-
-				<div class="display-div">
-					<h2> 
-				  	email@example.com
-					</h2>
-				</div>
-
-				<div class="flex-container">
-
-					<div>
-						<fieldset class="base-bid">
-			  				<legend><h3>Base bid</h3></legend>
-			  				<h2> 
-			  					$20
-			  				</h2>
-						</fieldset>
-			  		</div>
-				
-					<div>
-						<fieldset class="current-highest">
-				  			<legend><h3>Highest bid</h3></legend>
-				  			<h2>
-				  				$24
-							</h2>
-						</fieldset>
-					</div>
-				
-					</div>
-						<fieldset>
-							<legend><h3>Your bid</h3></legend>
-			  				<div>
-			 					<div>
-					  				<input type="test" name="Your_Bid" placeholder="Your Bid" required>
-								</div>
-					  		</div>
-					 
-							<button type="submit">Bid</button>
-						</fieldset>
-					</div>
-					
-				</div>
-			</fieldset>
-			-->
+			
 		</div>
 	</div>
 
