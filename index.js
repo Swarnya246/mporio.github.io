@@ -86,11 +86,37 @@ function logout() {
 }
 
 function displayData() {
-	var ref = firebase.database().ref();
+	// establishes root of db
+	var rootRef = firebase.database().ref();
 
-	ref.on("value", function(snapshot) {
-		console.log(snapshot.val());
-	}, function (error) {
-		console.log("Error: " + error.code);
+	// creates ref for node
+	var ref = rootRef.child('giftcards');
+
+	// gets values from database and changes html
+	ref.on('value', function(snap) {
+		// re-initializes answer in html, so doesn't repeat
+		document.getElementById("display").innerHTML = "";
+		// gets values for each element in data set
+
+		snap.forEach(function(child){
+			var childData = child.val();
+			var company = childData.company;
+			var val = childData.value;
+			var base = childData.base;
+			var email = childData.email;
+			var highest = childData.highest;
+			var startdate = childData.startdate;
+			var enddate = childData.enddate;
+
+			var today = new Date();
+			var enddate = new Date(enddate);
+			var startdate = new Date(startdate);
+
+			if ((today < enddate.getTime()) && (today >= startdate.getTime())) {
+				document.getElementById("display").innerHTML += "<fieldset class='giftcards'><legend><h1 class='giftcard-header'>$"+ val + " " + company + " Gift Card" + "</h1></legend><div class='display-div'><h2>" + email + "</h2></div><div class='flex-container'><div><fieldset class='base-bid'><legend><h3>Base bid</h3></legend><h2>$" + base + "</h2></fieldset></div><div><fieldset class='current-highest'><legend><h3>Highest bid</h3></legend><h2>$" + highest + "</h2></fieldset></div></div><fieldset><legend><h3>Your bid</h3></legend><div><div><input type='test' name='Your_Bid' placeholder='Your bid' required></div></div><button type='submit'>Bid</button></fieldset></div></div></fieldset>";
+			}
+		});
 	});
 }
+
+displayData()
