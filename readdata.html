@@ -17,22 +17,21 @@
 <script>
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyA7BLgVClWgdG-RxNgBqaeUN71ycEEtXbA",
-    authDomain: "giftcardbid-b5606.firebaseapp.com",
-    databaseURL: "https://giftcardbid-b5606.firebaseio.com",
-    projectId: "giftcardbid-b5606",
-    storageBucket: "giftcardbid-b5606.appspot.com",
-    messagingSenderId: "150202728158",
-    appId: "1:150202728158:web:ee999e30856854377f4c4f",
-    measurementId: "G-C7RLQ9ZNNT"
-  };
+    apiKey: "AIzaSyDhSdFVBYjQFASCXnec-maXZqXRyCJjGf8",
+  authDomain: "mporio-35b16.firebaseapp.com",
+  databaseURL: "https://mporio-35b16.firebaseio.com",
+  projectId: "mporio-35b16",
+  storageBucket: "mporio-35b16.appspot.com",
+  messagingSenderId: "1003574916249",
+  appId: "1:1003574916249:web:ce783c4bfabf7a5d4bf408"
+};
     firebase.initializeApp(firebaseConfig);
 
     //establishes root of db
     var rootRef = firebase.database().ref();
 
     //creates ref for node
-    var ref = rootRef.child('gcregister');
+    var ref = rootRef.child('giftcards');
 
     // gets values from database and changes html
     ref.on('value', function(snap) {
@@ -42,12 +41,14 @@
 
     snap.forEach(function(child){
     var childData = child.val();
-    var names = childData.company;
-    var val = childData.value;
-    var sprice = childData.price;
-    var sdate = childData.sdate;
-    var enddate = childData.enddate;
-    document.getElementById("answer").innerHTML += "<tr><td>"+ names + "</td><td> " + val + "</td><td>" + sprice + "</td></td>" + sdate + "</td><td>" + enddate + "</td></tr>";
+    var base = childData.base;
+    var company = childData.company;
+    var email = childData.email;
+    var edate = childData.enddate;
+    var highest = childData.highest;
+    var sdate = childData.startdate;
+    var value = childData.value;
+    document.getElementById("answer").innerHTML += "<tr><td>"+ company + "</td><td>" + email + "</td><td>" + value + "<tr><td>"+ sdate + "</td><td> " + edate + "</td><td>" + base + "</td></td>" + highest + "</td></tr>";
     });
 });
 </script>
