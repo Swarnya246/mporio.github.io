@@ -17,22 +17,25 @@
 	<div class="loggedin-div" id="user_div">
 		<h2 class="tagline" onclick="displayData()">A simple and effective way of assisting small businesses—by bidding on gift cards. </h2>
 	</div>
-<center>
-	<div class="gc-div">
-	<form action="" method="post">
-		<fieldset>
-			<legend><h3>Register a gift card</h3></legend>
-        <input type="text" name="Company" placeholder="Company" required>
-        <input type="text" name="Value" placeholder="Value" required>
-        <input type="test" name="Starting_Price" placeholder="Base price" required>
-	<input type="datetime-local" name="End_Date" placeholder="End of auction" required>
-
-        <button>Submit</button>
-				<button type="reset">Reset</button>
-		</fieldset>
-			</form>
+<div class="loggedin-div" id="user_div">
+		<h1>My Gift Cards</h1>
+		<div id="mygiftcards">
+			
 		</div>
-	</center>
+
+		<center>
+			<div class="gc-div">
+				<fieldset>
+					<legend><h3>Register a gift card</h3></legend>
+					<input type="text" name="Company" id="company" placeholder="Company" required>
+					<input type="number" name="Value" id="value" placeholder="Value" required>
+					<input type="number" name="Starting_Price" id="base" placeholder="Base price" required>
+					<input type="date" name="End_Date" id="end" placeholder="End of auction" required>
+
+					<button onclick="registerGiftCard()">Submit</button>
+				</fieldset>	
+			</div>
+		</center>
 	<script type="text/javascript">
 		$(function() {
 			$( "#Datepicker1" ).datetimepicker();
