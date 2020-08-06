@@ -1,0 +1,124 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Gift Card Bid Display</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="topnav">
+		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/mporio-logo.png">
+		<div class="topnav-right" id="topnav-right">
+			<a class="add-icon" href="g-cregister.html"><img class="add-icon" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/add-icon.png"></a>
+			<a class="gift-icon" href="gcdisplay.html"><img class="gift-icon" height="63px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/gift-icon.png"></a>
+			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
+		</div>
+	</div>
+	<div class="loggedin-div" id="user_div">
+		<h2 class="tagline" onclick="displayData()">A simple and effective way of assisting small businesses—by bidding on gift cards. </h2>
+	</div>
+
+<center>
+	<fieldset>
+		<legend><h3>
+		<!-- insert javascript to display data from db-->
+		$50 Amazon Gift Card</h3></legend>
+	<div class="display-div">
+
+      <h4> email@example.com
+      <!-- insert bidee email -->
+      </h4>
+
+		<fieldset1>
+      <div class="flex-container">
+      <div>
+				<fieldset>
+      <legend>Base Bid</legend>
+      <h1> $20
+      <!-- insert starting price from db, but leave dollar sign alone-->
+      </h1>
+		</fieldset>
+      </div>
+      <div>
+<fieldset>
+      <legend>Current Highest Bid</legend>
+      <h1>$24
+      <!--insert highest number from the value side of the table that holds the email and value of this gift card in the bidee's homepg, leave dollar sign-->
+      </h1>
+		</fieldset1>
+
+      </div>
+      </div>
+			<fieldset>
+				<legend> Your Bid </legend>
+      <div>
+      <div>
+		      <input type="test" name="Your_Bid" placeholder="Your Bid" required>
+				</div>
+		      </div>
+		      <button type="submit">Bid</button>
+				</fieldset>
+
+
+
+
+</div>
+	</fieldset>
+	</center>
+	<table>
+	<thead><th>Company</th><th>Email</th><th>Highest Bid</th><th>Value</th><th>Base Price</th><th>Start Date</th><th>End Date</th>
+	    </thead>
+	  <tbody id='answer'></tbody>
+	</table>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+			 https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDhSdFVBYjQFASCXnec-maXZqXRyCJjGf8",
+			authDomain: "mporio-35b16.firebaseapp.com",
+			databaseURL: "https://mporio-35b16.firebase.io.com",
+			projectId: "mporio-35b16",
+			storageBucket: "mporio-35b16.appspot.com",
+			messagingSenderId: "1003574916249",
+			appId: "1:1003574916249:web:ce783c4bfabf7a5d4bf408"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+	//establishes root of db
+	var rootRef = firebase.database().ref();
+
+	//creates ref for node
+	var ref = rootRef.child('giftcards');
+
+	// gets values from database and changes html
+	ref.on('value', function(snap) {
+	//re-initializes answer in html, so doesn't repeat
+	document.getElementById("answer").innerHTML = "";
+	//gets values for each element in data set
+
+	snap.forEach(function(child){
+	var childData = child.val();
+	var names = childData.company;
+	var highest = childData.highest;
+	var sprice = childData.base;
+	var value = childData.value;
+	var sdate = childData.startdate;
+	var enddate = childData.enddate;
+	var dbemail = childData.email;
+	document.getElementById("answer").innerHTML += "<tr><td>"+ names +"</td><td> " +dbemail+ "</td><td> " + highest + "</td><td> " + value + "</td><td>" + sprice + "</td></td>" + sdate + "</td><td>" + enddate + "</td></tr>";
+	});
+});
+</script>
+
+				<script type="text/javascript" src="index-swe.js"></script>
+
+</body>
+</html>
