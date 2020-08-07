@@ -14,10 +14,14 @@
 			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
 		</div>
 	</div>
-	<div class="loggedin-div">
-	</div>
-<div class="loggedin-div">
-	<center>
+	
+	<div class="loggedin-div" id="user_div">
+		<h1>My Gift Cards</h1>
+		<div id="mygiftcards">
+			
+		</div>
+
+		<center>
 			<div class="gc-div">
 				<fieldset>
 					<legend><h3>Register a gift card</h3></legend>
@@ -29,11 +33,7 @@
 					<button onclick="registerGiftCard()">Submit</button>
 				</fieldset>	
 			</div>
-		<h1>My Gift Cards</h1>
-	</center>
-		<div id="mygiftcards">
-			
-		</div>
+		</center>
 	</div>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -59,7 +59,7 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 	</script>
-				<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="gcregister.js"></script>
 
 </body>
 </html>
