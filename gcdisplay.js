@@ -14,9 +14,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 	} else {
 		// No user is signed in.
 
-		document.getElementById("user_div").style.display = "none";
-		document.getElementById("topnav-right").style.display = "none";
-		document.getElementById("auth").style.display = "flex";
 		window.location.replace("http://mporio.github.io/")
 
 	}
