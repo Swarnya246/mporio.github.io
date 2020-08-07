@@ -13,14 +13,40 @@
 			<a class="gift-icon" href="gcdisplay.html"><img class="gift-icon" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/home-icon.png"></a>
 			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
 		</div>
+	</div>	
+	
+	<div class="auth" id="auth">
+		<div class="main-div" id="login_div">
+			<fieldset>
+				<legend><h3>Login</h3></legend>
+
+				<input type="email" placeholder="your.email@example.com" id="email_field">
+				<input type="password" placeholder="••••••••" id="password_field">
+
+				<button onclick="login()">Login</button>
+				<button onclick="signinWithGoogle()"><img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" height="20px" class="google-logo"><span class="button-text"> Login with Google</span></button>
+			</fieldset>
+		</div>
+
+		<div class="main-div" id="signup_div">
+			<fieldset>
+  				<legend><h3>Sign up</h3></legend>
+
+				<input type="email" placeholder="your.email@example.com" id="email_signup_field">
+				<input type="password" placeholder="••••••••" id="password_signup_field">
+
+				<button onclick="signup()">Sign up</button>
+				<button onclick="signinWithGoogle()"><img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" height="20px" class="google-logo"><span class="button-text"> Sign up with Google</span></button>
+			</fieldset>
+		</div>
 	</div>
 
-	<center>
-<h1>Available Gift Cards</h1>
+	<div class="loggedin-div" id="user_div">
+		<h1>Available Gift Cards</h1>
 		<div id="display">
 			
 		</div>
-	</center>
+	</div>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -44,7 +70,6 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 	</script>
-				<script type="text/javascript" src="index.js"></script>
-
+	<script type="text/javascript" src="gcdisplay.js"></script>
 </body>
 </html>
