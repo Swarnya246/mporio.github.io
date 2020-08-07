@@ -1,7 +1,7 @@
 <!Doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">	
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mporio</title>
 	<link rel="icon" href="https://raw.githubusercontent.com/mporio/mporio.github.io/master/mporio-favicon.png" type="image/gif">
@@ -17,7 +17,7 @@
 			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
 		</div>
 	</div>
-	
+
 	<div class="auth" id="auth">
 		<div class="main-div" id="login_div">
 			<fieldset>
@@ -43,12 +43,6 @@
 			</fieldset>
 		</div>
 	</div>
-	
-	<div class="loggedin-div" id="user_div">
-		<h1>My Gift Cards</h1>
-		<div id="mygiftcards">
-			
-		</div>
 
 		<center>
 			<div class="gc-div">
@@ -60,10 +54,15 @@
 					<input type="date" name="End_Date" id="end" placeholder="End of auction" required>
 
 					<button onclick="registerGiftCard()">Submit</button>
-				</fieldset>	
+				</fieldset>
 			</div>
 		</center>
 	</div>
+	<div class="gcdiv-div" id="user_div">
+		<h1>My Gift Cards</h1>
+		<div id="mygiftcards">
+
+		</div>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
