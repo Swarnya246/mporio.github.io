@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-
 	<title>Mporio</title>
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -15,8 +13,8 @@
 			<a class="gift-icon" href="gcdisplay.html"><img class="gift-icon" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/home-icon.png"></a>
 			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
 		</div>
-	</div> 
-
+	</div>	
+	
 	<div class="auth" id="auth">
 		<div class="main-div" id="login_div">
 			<fieldset>
@@ -42,9 +40,12 @@
 			</fieldset>
 		</div>
 	</div>
-
+	
 	<div class="loggedin-div" id="user_div">
-		<meta http-equiv="refresh" content="0; URL=gcdisplay.html" />
+		<h1>Available Gift Cards</h1>
+		<div id="display">
+			
+		</div>
 	</div>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -69,7 +70,6 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 	</script>
-
-	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="gcdisplay.js"></script>
 </body>
 </html>
