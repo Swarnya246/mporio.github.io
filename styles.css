@@ -182,7 +182,6 @@ legend {
 .gcdiv-div{
 	padding: 20px;
 	margin-top: 150px;
-	width: 100%;
-	display:inline;
-  float:inherit;
+	width: 70%;
+	margin:auto;
 }
