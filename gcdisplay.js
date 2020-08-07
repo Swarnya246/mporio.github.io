@@ -17,6 +17,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		document.getElementById("user_div").style.display = "none";
 		document.getElementById("topnav-right").style.display = "none";
 		document.getElementById("auth").style.display = "flex";
+		window.location.replace("http://mporio.github.io/")
 
 	}
 });
