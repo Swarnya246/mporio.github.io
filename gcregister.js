@@ -8,16 +8,12 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 		document.getElementById("user_div").style.display = "block";
 		document.getElementById("topnav-right").style.display = "inline-flex";
-		document.getElementById("auth").style.display = "none";
 		showMyGiftCards()
 
 	} else {
 		// No user is signed in.
 
-		document.getElementById("user_div").style.display = "none";
-		document.getElementById("topnav-right").style.display = "none";
-		document.getElementById("auth").style.display = "flex";
-
+		window.location.replace("http://mporio.github.io/")
 	}
 });
 
