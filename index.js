@@ -1,5 +1,5 @@
 /*
-where the magic happens
+magic doesn't happen here
 */
 
 firebase.auth().onAuthStateChanged(function(user) {
