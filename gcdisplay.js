@@ -1,4 +1,6 @@
-/* where the magic happens */
+/* 
+where the magic happens 
+*/
 
 firebase.auth().onAuthStateChanged(function(user) {
 	if (user) {
@@ -7,6 +9,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 		document.getElementById("user_div").style.display = "block";
 		document.getElementById("topnav-right").style.display = "inline-flex";
 		document.getElementById("auth").style.display = "none";
+		displayData()
 
 	} else {
 		// No user is signed in.
@@ -153,5 +156,3 @@ function bid(key) {
 		firebase.database().ref('giftcards/' + key + '/bidder').set(currentUser)
 	}
 }
-
-displayData()
