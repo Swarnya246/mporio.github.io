@@ -1,0 +1,65 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Mporio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="topnav">
+		<img class="logo" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/mporio-logo.png">
+		<div class="topnav-right" id="topnav-right">
+			<a class="add-icon" href="gcregister.html"><img class="add-icon" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/add-icon.png"></a>
+				<a class="gift-icon" href="gcdisplay.html"><img class="gift-icon" height="51.6px" src="https://raw.githubusercontent.com/mporio/mporio.github.io/master/home-icon.png"></a>
+			<button class="logout" onclick="logout()" id="logout"><span class="button-text">Logout</span></button>
+		</div>
+	</div>
+	
+	<div class="loggedin-div" id="user_div">
+		<h1>My Gift Cards</h1>
+		<div id="mygiftcards">
+			
+		</div>
+
+		<center>
+			<div class="gc-div">
+				<fieldset>
+					<legend><h3>Register a gift card</h3></legend>
+					<input type="text" name="Company" id="company" placeholder="Company" required>
+					<input type="number" name="Value" id="value" placeholder="Value" required>
+					<input type="number" name="Starting_Price" id="base" placeholder="Base price" required>
+					<input type="date" name="End_Date" id="end" placeholder="End of auction" required>
+
+					<button onclick="registerGiftCard()">Submit</button>
+				</fieldset>	
+			</div>
+		</center>
+	</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+			 https://firebase.google.com/docs/web/setup#available-libraries -->
+
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyDhSdFVBYjQFASCXnec-maXZqXRyCJjGf8",
+			authDomain: "mporio-35b16.firebaseapp.com",
+			databaseURL: "https://mporio-35b16.firebaseio.com",
+			projectId: "mporio-35b16",
+			storageBucket: "mporio-35b16.appspot.com",
+			messagingSenderId: "1003574916249",
+			appId: "1:1003574916249:web:ce783c4bfabf7a5d4bf408"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+	</script>
+	<script type="text/javascript" src="gcregister.js"></script>
+
+</body>
+</html>
