@@ -81,7 +81,7 @@ button:hover {
 	align-content: center;
 	position: fixed;
 	top: 0;
-	width: 120%;
+	width: 100%;
 	-webkit-box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
 	-moz-box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
 	box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
