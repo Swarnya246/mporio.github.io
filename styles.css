@@ -36,7 +36,7 @@ input {
 	background: #fff;
 	padding: 15px;
 	outline: none;
-	width: 80%;
+	width: 100%;
 	margin-bottom: 20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -58,7 +58,7 @@ button {
 	border: 1px solid #26BD6D;
 	border-radius: 5px;
 	padding: 15px;
-	width: 80%;
+	width: 100%;
 	margin-bottom: 20px;
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
@@ -80,7 +80,7 @@ button:hover {
 	align-content: center;
 	position: fixed;
 	top: 0;
-	width: 80%;
+	width: 100%;
 	-webkit-box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
 	-moz-box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
 	box-shadow: 10px 10px 39px 0px rgba(168,168,168,1);
@@ -101,7 +101,7 @@ button:hover {
 }
 
 .auth {
-	width: 80%;
+	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;
@@ -138,7 +138,7 @@ h3 {
 }
 
 .flex-container{
-	width: 80%;
+	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;
