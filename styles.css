@@ -10,7 +10,7 @@ input, button {
 	font-family: 'Nunito', sans-serif;
 	font-weight: 700;
 }
- 
+
 .main-div, .signup-div {
 	margin-top: 150px;
 	padding: 20px;
@@ -20,16 +20,15 @@ input, button {
 .gc-div {
 	margin-top: 150px;
 	padding: 20px;
-	width: 80%;
+	width: 50%;
 }
 
 .loggedin-div {
 	padding: 20px;
-	width: 10%;
-	margin-left: 50px;
-	margin-right: 50px;
 	margin-top: 150px;
-	display: inline;
+	width: 100%;
+	display:inline;
+  float:inherit;
 }
 
 input {
@@ -135,7 +134,10 @@ fieldset {
 h3 {
 	color: #26BD6D;
 }
+h1{
+	text-align: center;
 
+}
 .add-icon, .gift-icon {
 	align-self: center;
 }
@@ -176,4 +178,11 @@ legend {
 
 .giftcard-header {
 	color: #26BD6D;
+}
+.gcdiv-div{
+	padding: 20px;
+	margin-top: 150px;
+	width: 100%;
+	display:inline;
+  float:inherit;
 }
