@@ -162,7 +162,7 @@ h3 {
 	margin-left: 25px;
 }
 
-#display {
+#display, #mygiftcards {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
@@ -184,14 +184,14 @@ input:required {
 	box-shadow: none;
 }
 
-.giftcards, .display-div, .base-bid, .current-highest, .your-bid {
+.giftcards, .display-div, .base-bid, .current-highest, .your-bid, .highest-email {
 	text-align: center;
 	padding: 0px;
 	margin: 25px;
 	font-size: 10px;
 }
 
-.base-bid, .current-highest, .your-bid {
+.base-bid, .current-highest, .your-bid, .highest-email {
 	margin-top: 0px;
 }
 
@@ -215,7 +215,7 @@ input:required {
 	width: 50%;
 }
 
-.your-bid {
+.your-bid, .highest-email {
 	padding-right: 12.5px;
 	padding-left: 12.5px;
 }
