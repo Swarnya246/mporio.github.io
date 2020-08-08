@@ -150,7 +150,7 @@ function bid(key) {
 		base = snapshot.val();
 	})
 
-	if ((currentUser != email) && (bidValue > highest) && (bidValue >= base)) {
+	if (((currentUser != email) && (bidValue > highest)) && (bidValue >= base)) {
 		firebase.database().ref('giftcards/' + key + '/highest').set(bidValue)
 		firebase.database().ref('giftcards/' + key + '/bidder').set(currentUser)
 	}
