@@ -117,7 +117,7 @@ function displayData() {
 				var base = childData.base;
 				var email = childData.email;
 				var highest = childData.highest;
-				document.getElementById("display").innerHTML += "<fieldset class='giftcards'><legend><h1 class='giftcard-header'>$"+ val + " " + company + " Gift Card" + "</h1></legend><div class='display-div'><h2>" + email + "</h2></div><div class='flex-container'><div><fieldset class='base-bid'><legend><h3>Base bid</h3></legend><h2>$" + base + "</h2></fieldset></div><div><fieldset class='current-highest'><legend><h3>Highest bid</h3></legend><h2>$" + highest + "</h2></fieldset></div></div><fieldset><legend><h3>Your bid</h3></legend><div><div><input type='number' name='Your_Bid' id='" + child.key + "' placeholder='Your bid' required></div></div><button onclick='bid(`" + child.key + "`)'>Bid</button></fieldset></div></div></fieldset>";
+				document.getElementById("display").innerHTML += "<fieldset class='giftcards'><legend><h1 class='giftcard-header'>$"+ val + " " + company + " Gift Card" + "</h1></legend><div class='display-div'><h2>" + email + "</h2></div><div class='flex-container'><div class='base-bid-div'><fieldset class='base-bid'><legend><h3>Base bid</h3></legend><h2>$" + base + "</h2></fieldset></div><div class='current-highest-div'><fieldset class='current-highest'><legend><h3>Highest bid</h3></legend><h2>$" + highest + "</h2></fieldset></div></div><fieldset class='your-bid'><legend><h3>Your bid</h3></legend><div><div><input type='number' name='Your_Bid' id='" + child.key + "' placeholder='Your bid' required></div></div><button onclick='bid(`" + child.key + "`)'>Bid</button></fieldset></div></div></fieldset>";
 			}
 		});
 	});
