@@ -111,7 +111,6 @@ function registerGiftCard() {
 	document.getElementById("end").value = null
 	document.getElementById("value").value = null
 }
-
 function showMyGiftCards() {
 	// establishes root of db
 	var rootRef = firebase.database().ref();
@@ -143,7 +142,7 @@ function showMyGiftCards() {
 				var enddate = new Date(enddate);
 				var startdate = new Date(startdate);
 
-				document.getElementById("mygiftcards").innerHTML += "<fieldset class='giftcards'><legend><h1 class='giftcard-header'>$"+ val + " " + company + " Gift Card" + "</h1></legend><div class='flex-container'><div><fieldset class='base-bid'><legend><h3>Base bid</h3></legend><h2>$" + base + "</h2></fieldset></div><div><fieldset class='current-highest'><legend><h3>Highest bid</h3></legend><h2>$" + highest + "</h2></fieldset></div></div><div class='flex-container'><div><fieldset class='base-bid'><legend><h3>Start date</h3></legend><h2>" + startdate.toUTCString() + "</h2></fieldset></div><div><fieldset class='current-highest'><legend><h3>End date</h3></legend><h2>" + enddate.toUTCString() + "</h2></fieldset></div></div><fieldset><legend><h3>Highest bidder</h3></legend><h2>" + bidder + "</h2></fieldset></div></div></fieldset>";
+				document.getElementById("mygiftcards").innerHTML += "<fieldset class='giftcards'><legend><h1 class='giftcard-header'>$"+ val + " " + company + " Gift Card" + "</h1></legend><div class='flex-container'><div class='base-bid-div'><fieldset class='base-bid'><legend><h3>Base bid</h3></legend><h2>$" + base + "</h2></fieldset></div><div class='current-highest-div'><fieldset class='current-highest'><legend><h3>Highest bid</h3></legend><h2>$" + highest + "</h2></fieldset></div></div><div class='flex-container'><div class='base-bid-div'><fieldset class='base-bid'><legend><h3>Start date</h3></legend><h2>" + startdate.toUTCString() + "</h2></fieldset></div><div class='current-highest-div'><fieldset class='current-highest'><legend><h3>End date</h3></legend><h2>" + enddate.toUTCString() + "</h2></fieldset></div></div><fieldset class='highest-email'><legend><h3>Highest bidder</h3></legend><h2>" + bidder + "</h2></fieldset></div></div></fieldset>";
 			}
 		});
 	});
